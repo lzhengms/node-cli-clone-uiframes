@@ -1,0 +1,32 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        //如果useBuiltIns选项为usage，则要申明corejs的版本，这也是为什么要安装core-js的原因
+        "corejs": "3", 
+        "loose": true
+      }
+    ],
+    "@babel/typescript", //如果你的环境有typescript，记得安装它
+    "@babel/react" //如果你使用了react，也要记得安装哦
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    [
+      "@babel/proposal-class-properties",
+      {
+        "loose": true
+      }
+    ],
+
+    "@babel/proposal-object-rest-spread",
+    "@babel/plugin-syntax-dynamic-import"
+  ]
+}
